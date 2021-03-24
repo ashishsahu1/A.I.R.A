@@ -82,6 +82,11 @@ except:
     model.fit(training, output , n_epoch = 2000, batch_size = 8, show_metric = True)
     model.save("model.tflearn")
 
+#in case of intent change
+# model.fit(training, output , n_epoch = 2000, batch_size = 8, show_metric = True)
+# model.save("model.tflearn")
+
+
 def bag_of_words(s, words):
     bag = [0 for _ in range(len(words))]
 
