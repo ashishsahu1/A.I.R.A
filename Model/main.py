@@ -1,3 +1,6 @@
+from silence_tensorflow import silence_tensorflow
+silence_tensorflow()
+
 import nltk
 from nltk.stem import LancasterStemmer
 stemer=LancasterStemmer()
@@ -5,6 +8,7 @@ stemer=LancasterStemmer()
 import numpy as np
 import tflearn
 import tensorflow
+
 import random
 import json
 import pickle
@@ -76,6 +80,8 @@ net = tflearn.regression(net)
 
 model = tflearn.DNN(net)
 
+
+
 try:
     model.load("../Artifacts/model.tflearn")
 except:
@@ -101,7 +107,20 @@ def bag_of_words(s, words):
     return np.array(bag)
 
 def chat():
-    print("Start Talking with the bot !")
+    print("""
+    *******************************************************************************************
+                                  ___________
+                       /\              ||           ||*****            /\
+                      //\\             ||           ||    **          //\\
+                     //  \\            ||           ||   **          //  \\
+                    //____\\           ||           ||***\\         //----\\
+                   //      \\          ||           ||    \\       //      \\
+                  //        \\  O  ____||_____  O   ||     \\  O  //        \\
+      
+    
+    ******************************************************************************************
+    """)
+    print("\n ------- Start Talking with AIRA ! ---------")
     while True:
         inp = input("You : ")
         if inp.lower() == "quit":
