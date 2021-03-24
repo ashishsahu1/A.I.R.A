@@ -5,8 +5,8 @@
          "context_set": ""
         },
         {"tag": "goodbye",
-         "patterns": ["cya", "See you later", "Goodbye", "I am Leaving", "Have a Good day"],
-         "responses": ["Sad to see you go :(", "Talk to you later", "Goodbye!"],
+         "patterns": ["cya", "See you later", "Goodbye", "I am Leaving", "Have a Good day", "Bye", "Okay"],
+         "responses": ["Sad to see you go :(", "Talk to you later", "Goodbye!","Hope I was helpfull"],
          "context_set": ""
         },
         {"tag": "age",
@@ -16,16 +16,16 @@
         },
         {"tag": "botname",
          "patterns": ["what is your name", "what should I call you", "whats your name?"],
-         "responses": ["You can call me AIRA.", "I'm AIRA! AI Resume for Ashish", "I'm AIRA aka AI Resume."],
+         "responses": ["You can call me AIRA.", "I'm AIRA! AI Resume for Ashish", "I'm AIRA aka AI Resume.","Hey, AIRA here.. Ask anything about Ashish","Hola !! AIRA here.."],
          "context_set": ""
         },
         {"tag": "About",
-         "patterns": ["Tell me something about Ashish", "about?", "What do you know about Ashish?", "About Ashish?"],
-         "responses": ["Okay! Ashish is an undergraduate student at NIST, Berhampur", "To start with, Ashish is persuing BTech in IT major from NIST, Berhampur","He Works on different technologies like Machine Learning, Deep Learning, Backend-end Development"],
+         "patterns": ["Tell me something about Ashish", "about?", "What do you know about Ashish?", "About Ashish?","Who is Ashish","What do you know about Ashish?"],
+         "responses": ["Okay! Ashish is an undergraduate student at NIST, Berhampur", "To start with, Ashish is persuing BTech in IT major from NIST, Berhampur","As of now, Ashish is a student at National Institute of Science and Technology"],
          "context_set": ""
         },
-        {"tag": "techStack",
-         "patterns": ["techstack?", "What are his techstacks?", "Do you know about technologies he is working","Working technolgies?"],
+        {"tag": "tech",
+         "patterns": ["techstack?", "What are his techstacks?", "Do you know about technologies he is working","Working technolgies?","Do you his techstack?"],
          "responses": ["His faviorite language is python, and for backend he generally uses Flask, iwth html,css","Backend: Flask, Frontend: HTML,CSS, Frameworks: Tensorflow, pytorch .....Hope you got it! "],
          "context_set": ""
         },
@@ -33,6 +33,11 @@
          "patterns": ["experience?", "What are his experiences?", "Do you know about technologies he is working","Working technolgies?"],
          "responses": ["His faviorite language is python, and for backend he generally uses Flask, iwth html,css","Backend: Flask, Frontend: HTML,CSS, Frameworks: Tensorflow, pytorch .....Hope you got it! "],
          "context_set": ""
+        },
+        {"tag": "links",
+        "patterns": ["any links?", "social handles?", "How to connect him","social profiles?","linkedin","github","mail id"],
+        "responses": ["Email: ashishsahu10428@gmail.com \n Linkedin: https://www.linkedin.com/in/ashishsahu2/ \n Github: https://github.com/ashishsahu1"],
+        "context_set": ""
         }
 
    ]
