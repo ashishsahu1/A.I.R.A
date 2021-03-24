@@ -9,11 +9,11 @@ import random
 import json
 import pickle
 
-with open("intents.json") as file:
+with open("../Intents/intents.json") as file:
     data = json.load(file)
 
 try:
-    with open("data.pickle","rb") as f:
+    with open("../Artifacts/data.pickle","rb") as f:
         words, labels, training, output = pickle.load(f)
 except:
     words = []
@@ -62,7 +62,7 @@ except:
     training = np.array(training)
     output = np.array(output)
 
-    with open("data.pickle","wb") as f:
+    with open("../Artifacts/data.pickle","wb") as f:
         pickle.dump((words, labels, training, output), f)
 
 #Deep learning model
@@ -77,14 +77,14 @@ net = tflearn.regression(net)
 model = tflearn.DNN(net)
 
 try:
-    model.load("model.tflearn")
+    model.load("../Artifacts/model.tflearn")
 except:
     model.fit(training, output , n_epoch = 2000, batch_size = 8, show_metric = True)
-    model.save("model.tflearn")
+    model.save("../Artifacts/model.tflearn")
 
 #in case of intent change
 # model.fit(training, output , n_epoch = 2000, batch_size = 8, show_metric = True)
-# model.save("model.tflearn")
+# model.save("../Artifacts/model.tflearn")
 
 
 def bag_of_words(s, words):
