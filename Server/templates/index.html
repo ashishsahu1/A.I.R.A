@@ -73,10 +73,11 @@
                   
                 </div>
                 <div class="card-footer">
-                    <div class="input-group>
-                        <form  name="message" action="">
-                            <input style="float: left;" class="form-control type_msg" placeholder="Type your query..." name="usermsg" type="text" id="usermsg" />
-                            <input style="float: right; " class="input-group-text send_btn" name="submitmsg" type="submit" id="submitmsg" value="Send" />
+                    <div class="input-group">
+                        
+                        <form name="message" action="/get" method='post'>
+                            <input style="float: left;" class="form-control type_msg" placeholder="Type your query..." name="msg" type="text" id="usermsg" />
+                            <button type="submit" value="submit">Send</button>
                         </form>
                     </div>
                 </div>

@@ -68,10 +68,15 @@ def chat(inputMsg):
 def hello_world():
     return render_template('index.html')
 
-@app.route("/get")
-def get_bot_response():    
-    userText = request.args.get('msg')   
-    return str(chat(userText)) 
+@app.route("/get",methods =["GET", "POST"])
+def get_bot_response(): 
+    if request.method == "POST":   
+        userText = request.form.get('msg') 
+        print(userText)  
+        # return str(chat(userText))
+        return str(chat(str(userText))) 
+    else:
+        return "Something went wrong"
 
 if __name__ == "__main__":    
     app.run(debug = True)
