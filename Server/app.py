@@ -74,7 +74,8 @@ def get_bot_response():
         userText = request.form.get('msg') 
         print(userText)  
         # return str(chat(userText))
-        return str(chat(str(userText))) 
+        # return str(chat(str(userText))) 
+        return render_template('index.html', botResponse = str(chat(str(userText))))
     else:
         return "Something went wrong"
 
