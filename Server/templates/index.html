@@ -47,7 +47,8 @@
                         </ul>
                     </div>
                 </div>
-                <div class="card-body msg_card_body">
+
+                <div id="myMessageContainer" class="msg_container_base card-body msg_card_body">
 
                     <!-- Aira response -->
                     <div class="d-flex justify-content-start mb-4">
@@ -89,7 +90,7 @@
                         <form name="message" action="/get" method='post'>
                             <input style="float: left;" class="form-control type_msg" placeholder="Type your query..."
                                 name="msg" type="text" id="usermsg" />
-                            <button type="submit" value="submit">Send</button>
+                            <button type="submit" id="submit" value="submit">Send</button>
                         </form>
                     </div>
                 </div>
@@ -97,6 +98,12 @@
         </div>
     </div>
     </div>
+
+    <script>
+       $('#myMessageContainer').stop ().animate ({
+  scrollTop: $('#myMessageContainer')[0].scrollHeight
+});
+    </script>
 
 </body>
 
