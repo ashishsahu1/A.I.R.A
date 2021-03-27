@@ -30,20 +30,21 @@
                 <div class="card-header msg_head">
                     <div class="d-flex bd-highlight">
                         <div class="img_cont">
-                            <img src="../static/Images/vect1.jpg" class="rounded-circle user_img">
+                            <img src="../static/Images/asset-5.png" class="rounded-circle user_img">
                             <span class="online_icon"></span>
                         </div>
                         <div class="user_info">
                             <span>A.I.R.A</span>
+                            <p>Artificial Intelligence (AI-Bot) Resume for Ashish</p>
                         </div>
                     </div>
                     <span id="action_menu_btn"><i class="fas fa-ellipsis-v"></i></span>
                     <div class="action_menu">
                         <ul>
-                            <li><i class="fas fa-user-circle"></i> View profile</li>
-                            <li><i class="fas fa-users"></i> Connect Ashish</li>
-                            <li><i class="fas fa-plus"></i> Github</li>
-                            <li><i class="fas fa-ban"></i> About</li>
+                            <li><a href="http://www.website.com"><i class="fas fa-user-circle"></i></a> View profile</li>
+                            <li><i class="fas fa-user"></i> Ashish</li>
+                            <li><i class="fas fa-code-fork"></i> Github</li>
+                            <li><i class="fas fa-info-circle"></i> About</li>
                         </ul>
                     </div>
                 </div>
@@ -53,7 +54,7 @@
                     <!-- Aira response -->
                     <div class="d-flex justify-content-start mb-4">
                         <div class="img_cont_msg">
-                            <img src="../static/Images/vect1.jpg" class="rounded-circle user_img_msg">
+                            <img src="../static/Images/asset-5.png" class="rounded-circle user_img_msg">
                         </div>
                         <div class="msg_cotainer">
                             Hey👋, This is A.I.R.A, an advanced AI-Bot Resume, for Ashish
@@ -68,14 +69,14 @@
                             {{chat.user}}
                         </div>
                         <div class="img_cont_msg">
-                            <img src="../static/Images/vect1.jpg" class="rounded-circle user_img_msg">
+                            <img src="../static/Images/asset-2.png" class="rounded-circle user_img_msg">
                         </div>
                     </div>
 
                     <!-- bot response -->
                     <div class="d-flex justify-content-start mb-4">
                         <div class="img_cont_msg">
-                            <img src="../static/Images/vect1.jpg" class="rounded-circle user_img_msg">
+                            <img src="../static/Images/asset-5.png" class="rounded-circle user_img_msg">
                         </div>
                         <div class="msg_cotainer">
                             {{chat.bot}}
@@ -86,9 +87,10 @@
                 </div>
                 <div id="base4" class="card-footer">
                     <div id="base5" class="input-group">
-
-                        <form id='base6' name="message" action="/get" method='post'>
-                            <input style="float: left;" class="form-control type_msg" placeholder="Type your query..."
+                        <!-- type_msg -->
+                        <!-- form-control -->
+                        <form class="form-base" id='base6' name="message" action="/get" method='post'>
+                            <input style="float: left;" class="form-control h-100 input-lg type_msg" placeholder="Type your query..."
                                 name="msg" type="text" id="usermsg" />
                             <button style="visibility: hidden;" type="submit" id="submit" value="submit">Send</button>
                         </form>

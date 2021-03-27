@@ -49,10 +49,16 @@ body,html{
     border-radius: 15px 15px 0 0 !important;
     border-bottom: 0 !important;
 }
+
+.form-base{
+    width: 100%;
+    box-sizing: border-box;
+    resize: vertical;
+}
+
 .card-footer{
-border-radius: 0 0 15px 15px !important;
+    border-radius: 0 0 15px 15px !important;
     border-top: 0 !important;
-    width: max-content;
 }
 .container{
     align-content: center;
@@ -71,20 +77,13 @@ border-radius: 0 0 15px 15px !important;
     background-color: rgba(0,0,0,0.3) !important;
     border:0 !important;
     color:white !important;
-    height: 60px !important;
-    overflow-y: auto;
+    width: 100%;
 }
     .type_msg:focus{
      box-shadow:none !important;
    outline:0px !important;
 }
-.attach_btn{
-border-radius: 15px 0 0 15px !important;
-background-color: rgba(0,0,0,0.3) !important;
-    border:0 !important;
-    color: white !important;
-    cursor: pointer;
-}
+
 .send_btn{
 border-radius: 0 15px 15px 0 !important;
 background-color: rgba(0,0,0,0.3) !important;
@@ -158,16 +157,7 @@ color: white;
 font-size: 10px;
 color: rgba(255,255,255,0.6);
 }
-.video_cam{
-margin-left: 50px;
-margin-top: 5px;
-}
-.video_cam span{
-color: white;
-font-size: 20px;
-cursor: pointer;
-margin-right: 20px;
-}
+
 .msg_cotainer{
 margin-top: auto;
 margin-bottom: auto;
