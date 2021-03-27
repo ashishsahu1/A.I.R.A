@@ -76,6 +76,8 @@ def chat(inputMsg):
 
 @app.route('/')
 def hello_world():
+    db.session.query(Chat).delete()
+    db.session.commit()
     return render_template('index.html')
 
 @app.route("/get",methods =["GET", "POST"])

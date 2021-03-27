@@ -23,10 +23,10 @@
 
 </head>
 
-<body>
-    <div class="row container-fluid h-100 justify-content-center">
-        <div class="col-md-8 col-xl-6 chat">
-            <div class="card">
+<body onload="document.base1.base2.base3.base4.base5.base6.usermsg.focus();">
+    <div id="base" class="row container-fluid h-100 justify-content-center">
+        <div id="base2" class="col-md-8 col-xl-6 chat">
+            <div id="base3" class="card">
                 <div class="card-header msg_head">
                     <div class="d-flex bd-highlight">
                         <div class="img_cont">
@@ -84,13 +84,13 @@
                     {% endfor %}
 
                 </div>
-                <div class="card-footer">
-                    <div class="input-group">
+                <div id="base4" class="card-footer">
+                    <div id="base5" class="input-group">
 
-                        <form name="message" action="/get" method='post'>
+                        <form id='base6' name="message" action="/get" method='post'>
                             <input style="float: left;" class="form-control type_msg" placeholder="Type your query..."
                                 name="msg" type="text" id="usermsg" />
-                            <button type="submit" id="submit" value="submit">Send</button>
+                            <button style="visibility: hidden;" type="submit" id="submit" value="submit">Send</button>
                         </form>
                     </div>
                 </div>
@@ -100,9 +100,18 @@
     </div>
 
     <script>
-       $('#myMessageContainer').stop ().animate ({
-  scrollTop: $('#myMessageContainer')[0].scrollHeight
-});
+        $('#myMessageContainer').stop().animate({
+            scrollTop: $('#myMessageContainer')[0].scrollHeight
+        });
+
+        input.addEventListener("keyup", function (event) {
+            if (event.keyCode === 13) {
+                event.preventDefault();
+                document.getElementById("submit").click();
+            }
+        });
+
+        document.base1.base2.base3.base4.base5.base6.usermsg.focus();
     </script>
 
 </body>
