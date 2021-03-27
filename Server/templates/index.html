@@ -7,7 +7,7 @@
 <html>
 
 <head>
-    
+
     <title>Chat</title>
     <link type="text/css" rel="stylesheet" href="{{ url_for('static', filename='static.css') }}" />
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css"
@@ -30,8 +30,7 @@
                 <div class="card-header msg_head">
                     <div class="d-flex bd-highlight">
                         <div class="img_cont">
-                            <img src="../static/Images/vect1.jpg"
-                                class="rounded-circle user_img">
+                            <img src="../static/Images/vect1.jpg" class="rounded-circle user_img">
                             <span class="online_icon"></span>
                         </div>
                         <div class="user_info">
@@ -53,30 +52,43 @@
                     <!-- Aira response -->
                     <div class="d-flex justify-content-start mb-4">
                         <div class="img_cont_msg">
-                            <img src="../static/Images/vect1.jpg"
-                                class="rounded-circle user_img_msg">
+                            <img src="../static/Images/vect1.jpg" class="rounded-circle user_img_msg">
                         </div>
                         <div class="msg_cotainer">
                             Hey👋, This is A.I.R.A, an advanced AI-Bot Resume, for Ashish
                         </div>
                     </div>
 
+
+                    {% for chat in allChat %}
                     <!-- user respnse -->
                     <div class="d-flex justify-content-end mb-4">
                         <div class="msg_cotainer_send">
-                            {{botResponse}}
+                            {{chat.user}}
                         </div>
                         <div class="img_cont_msg">
                             <img src="../static/Images/vect1.jpg" class="rounded-circle user_img_msg">
                         </div>
                     </div>
-                  
+
+                    <!-- bot response -->
+                    <div class="d-flex justify-content-start mb-4">
+                        <div class="img_cont_msg">
+                            <img src="../static/Images/vect1.jpg" class="rounded-circle user_img_msg">
+                        </div>
+                        <div class="msg_cotainer">
+                            {{chat.bot}}
+                        </div>
+                    </div>
+                    {% endfor %}
+
                 </div>
                 <div class="card-footer">
                     <div class="input-group">
-                        
+
                         <form name="message" action="/get" method='post'>
-                            <input style="float: left;" class="form-control type_msg" placeholder="Type your query..." name="msg" type="text" id="usermsg" />
+                            <input style="float: left;" class="form-control type_msg" placeholder="Type your query..."
+                                name="msg" type="text" id="usermsg" />
                             <button type="submit" value="submit">Send</button>
                         </form>
                     </div>

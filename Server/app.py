@@ -9,8 +9,18 @@ import nltk
 from nltk.stem import LancasterStemmer
 stemer=LancasterStemmer()
 
+from flask_sqlalchemy import SQLAlchemy
+
 #flask app
 app = Flask(__name__)
+app.config['SQLALCHEMY_DATABASE_URI'] = 'sqlite:///db.db'
+app.config['SQLALCHEMY_TRACK_MODIFICATIONS'] = False
+db = SQLAlchemy(app)
+
+class Chat(db.Model):
+    sno = db.Column(db.Integer,primary_key = True)
+    user =  db.Column(db.String(500),nullable = False)
+    bot =  db.Column(db.String(500),nullable = False)
 
 #opening necessory files
 with open("../Intents/intents.json") as file:
@@ -73,11 +83,15 @@ def get_bot_response():
     if request.method == "POST":   
         userText = request.form.get('msg') 
         print(userText)  
-        # return str(chat(userText))
-        # return str(chat(str(userText))) 
-        return render_template('index.html', botResponse = str(chat(str(userText))))
-    else:
-        return "Something went wrong"
+        botResponse = str(chat(str(userText))) 
+        print(botResponse)
+        chatr = Chat(user = userText, bot = botResponse)
+        db.session.add(chatr)
+        db.session.commit()
+    allChat = Chat.query.all()
+        # return render_template('index.html',userText=userText, botResponse = botResponse)
+    return render_template('index.html',allChat=allChat)
+    
 
 if __name__ == "__main__":    
     app.run(debug = True)
