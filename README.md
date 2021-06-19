@@ -40,13 +40,12 @@ AIRA is my personal AI based Resume Bot which can talk about me (Ashish) and pro
     └───app.py
 ```
 ```js
-   const myvar = "hello"
   	Artifacts : [	- All built pickles and other files,
                  	- tflearn, pickle exports
   	],
     Intents : [	- Conversation samples for the model,
-                Intents.json : [ - Current working intent],
-                testIntents.json : [ - under development intents],
+                "Intents.json" : [ - Current working intent],
+                "testIntents.json" : [ - under development intents],
   	],
     Model : [	- Creation of model,
                  	- tflearn, NLTK and other packages used
