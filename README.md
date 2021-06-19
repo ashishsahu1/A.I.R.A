@@ -39,7 +39,7 @@ AIRA is my personal AI based Resume Bot which can talk about me (Ashish) and pro
     |   └───index.html
     └───app.py
 ```
-```
+```js
    const myvar = "hello"
   	Artifacts : [	- All built pickles and other files,
                  	- tflearn, pickle exports
