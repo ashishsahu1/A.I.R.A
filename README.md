@@ -17,7 +17,7 @@ AIRA is my personal AI based Resume Bot which can talk about me (Ashish) and pro
 - tensorflow : 2.4.1
 - tflearn : 0.5.0
 
-## 📌About Folders
+## 📌Folder Manual
 ```
 ├───Artifacts
 |   ├───checkpoint
@@ -39,8 +39,11 @@ AIRA is my personal AI based Resume Bot which can talk about me (Ashish) and pro
     |   └───index.html
     └───app.py
 ```
+
+
 ```js
-  	Artifacts : [	- All built pickles and other files,
+   const myvar = "Manual"
+    Artifacts : [	- All built pickles and other files,
                  	- tflearn, pickle exports
   	],
     Intents : [	- Conversation samples for the model,
@@ -53,9 +56,9 @@ AIRA is my personal AI based Resume Bot which can talk about me (Ashish) and pro
     Server : [	- Main server file,
                  	- Flask server setup
   	],
-  	
-
 ```
+
+
 
 ## 📌Screen Snaps
 
