@@ -91,8 +91,9 @@ AIRA is my personal AI based Resume Bot which can talk about me (Ashish) and pro
     ```
 - Open Localhost : http://localhost:5000/
     
+<br>
+<br>
 
-
-## 📌About
+<center>Made with 💜 and 🧠 by, <a href="https://www.linkedin.com/in/ashishsahu2/">Ashish 😊</a></center>
 
 
