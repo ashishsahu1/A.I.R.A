@@ -23,10 +23,10 @@ class Chat(db.Model):
     bot =  db.Column(db.String(500),nullable = False)
 
 #opening necessory files
-with open("../Intents/intents.json") as file:
+with open("./Intents/intents.json") as file:
     data = json.load(file)
 
-with open("../Artifacts/data.pickle","rb") as f:
+with open("./Artifacts/data.pickle","rb") as f:
     words, labels, training, output = pickle.load(f)
 
 #Deep learning model
@@ -37,7 +37,7 @@ net = tflearn.fully_connected(net,8)
 net = tflearn.fully_connected(net,len(output[0]),activation = "softmax")
 net = tflearn.regression(net)
 model = tflearn.DNN(net)
-model.load("../Artifacts/model.tflearn")
+model.load("./Artifacts/model.tflearn")
 
 #function for chat
 def bag_of_words(s, words):
