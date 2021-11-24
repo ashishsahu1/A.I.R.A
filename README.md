@@ -63,6 +63,10 @@ AIRA is my personal AI based Resume Bot which can talk about me (Ashish) and pro
 ## 📌Screen Snaps
 ![snap](https://user-images.githubusercontent.com/52550558/143071480-bc89174f-a6e7-467b-9997-f30c913b7cb4.png)
 
+
+## 📌Working Snap
+![Chat with 💙AIRA - Google Chrome 2021-11-23 22-45-40 (2)](https://user-images.githubusercontent.com/52550558/143168115-de49683a-5561-4cab-9db1-aff9be87929e.gif)
+
 ## 📌Setup
 
 - Clone the repo
